@@ -1,15 +1,113 @@
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Chivitalcon</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #f7f7f7;
+            color: #222;
+        }
+
+        header {
+            padding: 24px;
+            text-align: center;
+            background: white;
+            border-bottom: 1px solid #e5e5e5;
+        }
+
+        header h1 {
+            font-size: 32px;
+            margin-bottom: 8px;
+        }
+
+        header p {
+            color: #666;
+            font-size: 16px;
+        }
+
+        main {
+            min-height: 80vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 40px 20px;
+        }
+
+        .hero {
+            max-width: 700px;
+            text-align: center;
+        }
+
+        .hero h2 {
+            font-size: 42px;
+            line-height: 1.15;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 19px;
+            line-height: 1.6;
+            color: #666;
+            margin-bottom: 30px;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 14px 28px;
+            background: #222;
+            color: white;
+            text-decoration: none;
+            border-radius: 10px;
+            font-size: 16px;
+        }
+
+        .button:hover {
+            opacity: 0.85;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            color: #888;
+            font-size: 14px;
+        }
+    </style>
 </head>
+
 <body>
 
-    <h1>Chivitalcon</h1>
+    <header>
+        <h1>Chivitalcon</h1>
+        <p>Tu espacio, de forma sencilla.</p>
+    </header>
 
-    <p>Estamos construyendo esto paso a paso.</p>
+    <main>
+        <section class="hero">
+            <h2>Bienvenido a Chivitalcon</h2>
+
+            <p>
+                Estamos construyendo una nueva experiencia
+                pensada para ser sencilla, clara y útil.
+            </p>
+
+            <a href="#" class="button">Empezar</a>
+        </section>
+    </main>
+
+    <footer>
+        © 2026 Chivitalcon
+    </footer>
 
 </body>
 </html>
