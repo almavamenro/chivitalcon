@@ -1,1 +1,931 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <title>Álvaro Martínez Fisioterapia | Córdoba</title>
+
+    <meta name="description" content="Álvaro Martínez Fisioterapia en Córdoba. Terapia manual, readaptación de lesiones y electroterapia. Atención en casa y a domicilio.">
+
+    <style>
+        :root {
+            --primary: #5f5147;
+            --primary-dark: #40372f;
+            --background: #f7f5f2;
+            --surface: #ffffff;
+            --text: #292724;
+            --muted: #706b65;
+            --border: #e5e0da;
+            --accent: #d8cec2;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: var(--background);
+            color: var(--text);
+            line-height: 1.6;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        .container {
+            width: min(1120px, 92%);
+            margin: 0 auto;
+        }
+
+        /* HEADER */
+
+        header {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background: rgba(255,255,255,0.96);
+            border-bottom: 1px solid var(--border);
+        }
+
+        .nav {
+            min-height: 74px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 30px;
+        }
+
+        .brand {
+            font-size: 1.05rem;
+            font-weight: 700;
+            letter-spacing: 0.04em;
+            color: var(--primary-dark);
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 25px;
+            font-size: 0.92rem;
+        }
+
+        .nav-links a {
+            color: var(--muted);
+            transition: 0.2s ease;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary);
+        }
+
+        .nav-button {
+            background: var(--primary);
+            color: white !important;
+            padding: 11px 18px;
+            border-radius: 8px;
+        }
+
+        .nav-button:hover {
+            background: var(--primary-dark);
+        }
+
+        /* HERO */
+
+        .hero {
+            padding: 100px 0 90px;
+            background:
+                linear-gradient(rgba(247,245,242,0.9), rgba(247,245,242,0.9));
+        }
+
+        .hero-content {
+            max-width: 800px;
+        }
+
+        .eyebrow {
+            display: inline-block;
+            margin-bottom: 20px;
+            color: var(--primary);
+            font-size: 0.85rem;
+            font-weight: 700;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+        }
+
+        h1 {
+            font-size: clamp(2.5rem, 6vw, 4.8rem);
+            line-height: 1.05;
+            letter-spacing: -0.04em;
+            margin-bottom: 25px;
+            color: var(--primary-dark);
+        }
+
+        .hero p {
+            max-width: 650px;
+            font-size: 1.15rem;
+            color: var(--muted);
+            margin-bottom: 32px;
+        }
+
+        .hero-actions {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 14px;
+        }
+
+        .button {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 14px 22px;
+            border-radius: 8px;
+            font-weight: 700;
+            transition: 0.2s ease;
+        }
+
+        .button-primary {
+            background: var(--primary);
+            color: white;
+        }
+
+        .button-primary:hover {
+            background: var(--primary-dark);
+        }
+
+        .button-secondary {
+            border: 1px solid var(--border);
+            background: white;
+            color: var(--primary-dark);
+        }
+
+        .button-secondary:hover {
+            border-color: var(--primary);
+        }
+
+        /* SECTIONS */
+
+        section {
+            padding: 90px 0;
+        }
+
+        .section-heading {
+            max-width: 680px;
+            margin-bottom: 45px;
+        }
+
+        .section-heading span {
+            display: block;
+            margin-bottom: 10px;
+            color: var(--primary);
+            font-size: 0.8rem;
+            font-weight: 700;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+        }
+
+        .section-heading h2 {
+            font-size: clamp(2rem, 4vw, 3rem);
+            line-height: 1.15;
+            margin-bottom: 15px;
+            color: var(--primary-dark);
+        }
+
+        .section-heading p {
+            color: var(--muted);
+        }
+
+        /* SERVICES */
+
+        .services {
+            background: var(--surface);
+        }
+
+        .service-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .service-card {
+            padding: 30px;
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            background: var(--surface);
+        }
+
+        .service-number {
+            font-size: 0.8rem;
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 35px;
+        }
+
+        .service-card h3 {
+            font-size: 1.35rem;
+            margin-bottom: 12px;
+            color: var(--primary-dark);
+        }
+
+        .service-card p {
+            color: var(--muted);
+        }
+
+        /* HOW */
+
+        .how-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+
+        .how-item {
+            border-top: 1px solid var(--border);
+            padding-top: 22px;
+        }
+
+        .how-item strong {
+            display: block;
+            font-size: 1.1rem;
+            margin-bottom: 10px;
+            color: var(--primary-dark);
+        }
+
+        .how-item p {
+            color: var(--muted);
+        }
+
+        /* PRICES */
+
+        .prices {
+            background: var(--primary-dark);
+            color: white;
+        }
+
+        .prices .section-heading h2,
+        .prices .section-heading p {
+            color: white;
+        }
+
+        .prices .section-heading span {
+            color: var(--accent);
+        }
+
+        .price-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            max-width: 850px;
+        }
+
+        .price-card {
+            background: white;
+            color: var(--text);
+            padding: 35px;
+            border-radius: 12px;
+        }
+
+        .price-card h3 {
+            color: var(--primary-dark);
+            margin-bottom: 10px;
+        }
+
+        .price {
+            font-size: 2.7rem;
+            font-weight: 700;
+            color: var(--primary);
+            margin: 10px 0;
+        }
+
+        .price-card p {
+            color: var(--muted);
+        }
+
+        .duration {
+            margin-top: 18px;
+            padding-top: 18px;
+            border-top: 1px solid var(--border);
+            font-size: 0.9rem;
+            color: var(--muted);
+        }
+
+        /* ABOUT */
+
+        .about {
+            background: var(--surface);
+        }
+
+        .about-content {
+            max-width: 800px;
+        }
+
+        .about-content p {
+            font-size: 1.08rem;
+            color: var(--muted);
+            margin-bottom: 18px;
+        }
+
+        /* CONTACT */
+
+        .contact {
+            background: var(--background);
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: start;
+        }
+
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .contact-item {
+            padding: 20px;
+            background: white;
+            border: 1px solid var(--border);
+            border-radius: 10px;
+        }
+
+        .contact-item small {
+            display: block;
+            color: var(--muted);
+            margin-bottom: 5px;
+        }
+
+        .contact-item strong {
+            color: var(--primary-dark);
+        }
+
+        .contact-box {
+            background: var(--primary);
+            color: white;
+            padding: 35px;
+            border-radius: 12px;
+        }
+
+        .contact-box h3 {
+            font-size: 1.7rem;
+            margin-bottom: 15px;
+        }
+
+        .contact-box p {
+            margin-bottom: 25px;
+            color: #eee;
+        }
+
+        .contact-box .button {
+            background: white;
+            color: var(--primary-dark);
+        }
+
+        /* FOOTER */
+
+        footer {
+            background: var(--primary-dark);
+            color: #ddd;
+            padding: 35px 0;
+        }
+
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            gap: 30px;
+            align-items: center;
+        }
+
+        .footer-brand {
+            font-weight: 700;
+            color: white;
+        }
+
+        .footer-links {
+            display: flex;
+            gap: 20px;
+            font-size: 0.85rem;
+        }
+
+        .footer-links a:hover {
+            color: white;
+        }
+
+        .copyright {
+            margin-top: 25px;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255,255,255,0.12);
+            font-size: 0.8rem;
+            color: #aaa;
+        }
+
+        /* MOBILE */
+
+        @media (max-width: 800px) {
+
+            .nav {
+                min-height: 65px;
+            }
+
+            .nav-links {
+                display: none;
+            }
+
+            .hero {
+                padding: 75px 0 65px;
+            }
+
+            section {
+                padding: 65px 0;
+            }
+
+            .service-grid,
+            .how-grid,
+            .price-grid,
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-content {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            h1 {
+                font-size: 2.8rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <div class="container nav">
+
+        <a href="#inicio" class="brand">
+            ÁLVARO MARTÍNEZ FISIOTERAPIA
+        </a>
+
+        <nav class="nav-links">
+            <a href="#servicios">Servicios</a>
+            <a href="#como-trabajo">Cómo trabajo</a>
+            <a href="#tarifas">Tarifas</a>
+            <a href="#sobre-mi">Sobre mí</a>
+            <a href="#contacto" class="nav-button">Solicitar cita</a>
+        </nav>
+
+    </div>
+</header>
+
+
+<main>
+
+    <!-- HERO -->
+
+    <section class="hero" id="inicio">
+        <div class="container">
+
+            <div class="hero-content">
+
+                <span class="eyebrow">
+                    Fisioterapia en Córdoba
+                </span>
+
+                <h1>
+                    Recupera movimiento.<br>
+                    Recupera confianza.
+                </h1>
+
+                <p>
+                    Atención de fisioterapia personalizada en Córdoba,
+                    tanto en casa como a domicilio, adaptada a las necesidades
+                    de cada persona.
+                </p>
+
+                <div class="hero-actions">
+
+                    <a
+                        href="https://wa.me/34691180034"
+                        class="button button-primary"
+                        target="_blank"
+                        rel="noopener"
+                    >
+                        Solicitar cita
+                    </a>
+
+                    <a
+                        href="#servicios"
+                        class="button button-secondary"
+                    >
+                        Ver servicios
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- SERVICES -->
+
+    <section class="services" id="servicios">
+
+        <div class="container">
+
+            <div class="section-heading">
+
+                <span>Servicios</span>
+
+                <h2>
+                    Tratamiento adaptado a ti
+                </h2>
+
+                <p>
+                    Cada tratamiento se adapta a las características,
+                    objetivos y evolución de cada paciente.
+                </p>
+
+            </div>
+
+
+            <div class="service-grid">
+
+                <article class="service-card">
+
+                    <div class="service-number">
+                        01
+                    </div>
+
+                    <h3>
+                        Terapia manual
+                    </h3>
+
+                    <p>
+                        Técnicas manuales dirigidas a mejorar la movilidad,
+                        reducir molestias y favorecer la recuperación funcional.
+                    </p>
+
+                </article>
+
+
+                <article class="service-card">
+
+                    <div class="service-number">
+                        02
+                    </div>
+
+                    <h3>
+                        Readaptación de lesiones
+                    </h3>
+
+                    <p>
+                        Proceso progresivo orientado a recuperar capacidades
+                        físicas y facilitar la vuelta a las actividades habituales.
+                    </p>
+
+                </article>
+
+
+                <article class="service-card">
+
+                    <div class="service-number">
+                        03
+                    </div>
+
+                    <h3>
+                        Electroterapia
+                    </h3>
+
+                    <p>
+                        Aplicación de técnicas de electroterapia como complemento
+                        dentro del tratamiento de fisioterapia.
+                    </p>
+
+                </article>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- HOW I WORK -->
+
+    <section id="como-trabajo">
+
+        <div class="container">
+
+            <div class="section-heading">
+
+                <span>Cómo trabajo</span>
+
+                <h2>
+                    Un tratamiento pensado para ti
+                </h2>
+
+                <p>
+                    El objetivo es ofrecer una atención cercana y personalizada
+                    durante todo el proceso.
+                </p>
+
+            </div>
+
+
+            <div class="how-grid">
+
+                <div class="how-item">
+
+                    <strong>
+                        01. Valoración
+                    </strong>
+
+                    <p>
+                        Conocer tu situación y tus necesidades es el primer paso
+                        para plantear el tratamiento.
+                    </p>
+
+                </div>
+
+
+                <div class="how-item">
+
+                    <strong>
+                        02. Tratamiento
+                    </strong>
+
+                    <p>
+                        Se aplican las técnicas de fisioterapia adecuadas
+                        según tus objetivos y evolución.
+                    </p>
+
+                </div>
+
+
+                <div class="how-item">
+
+                    <strong>
+                        03. Evolución
+                    </strong>
+
+                    <p>
+                        El tratamiento se adapta progresivamente a los cambios
+                        y objetivos alcanzados.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- PRICES -->
+
+    <section class="prices" id="tarifas">
+
+        <div class="container">
+
+            <div class="section-heading">
+
+                <span>Tarifas</span>
+
+                <h2>
+                    Sencillo y transparente
+                </h2>
+
+                <p>
+                    Sesiones individuales de 45 a 60 minutos.
+                </p>
+
+            </div>
+
+
+            <div class="price-grid">
+
+                <article class="price-card">
+
+                    <h3>
+                        En casa
+                    </h3>
+
+                    <div class="price">
+                        25 €
+                    </div>
+
+                    <p>
+                        Sesión individual de fisioterapia.
+                    </p>
+
+                    <div class="duration">
+                        Duración: 45–60 minutos
+                    </div>
+
+                </article>
+
+
+                <article class="price-card">
+
+                    <h3>
+                        A domicilio
+                    </h3>
+
+                    <div class="price">
+                        30 €
+                    </div>
+
+                    <p>
+                        Fisioterapia directamente en tu domicilio.
+                    </p>
+
+                    <div class="duration">
+                        Duración: 45–60 minutos
+                    </div>
+
+                </article>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ABOUT -->
+
+    <section class="about" id="sobre-mi">
+
+        <div class="container">
+
+            <div class="about-content">
+
+                <div class="section-heading">
+
+                    <span>Sobre mí</span>
+
+                    <h2>
+                        Álvaro Martínez
+                    </h2>
+
+                </div>
+
+                <p>
+                    Soy Álvaro Martínez, fisioterapeuta, y trabajo de forma
+                    individual con cada paciente para adaptar el tratamiento
+                    a sus necesidades.
+                </p>
+
+                <p>
+                    Actualmente ofrezco atención en Córdoba, tanto en casa
+                    como mediante servicio a domicilio.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- CONTACT -->
+
+    <section class="contact" id="contacto">
+
+        <div class="container">
+
+            <div class="section-heading">
+
+                <span>Contacto</span>
+
+                <h2>
+                    ¿Hablamos?
+                </h2>
+
+                <p>
+                    Si quieres solicitar una cita o resolver alguna duda,
+                    puedes contactar directamente conmigo.
+                </p>
+
+            </div>
+
+
+            <div class="contact-grid">
+
+                <div class="contact-info">
+
+                    <a
+                        href="https://wa.me/34691180034"
+                        target="_blank"
+                        rel="noopener"
+                        class="contact-item"
+                    >
+
+                        <small>
+                            WhatsApp / Teléfono
+                        </small>
+
+                        <strong>
+                            691 180 034
+                        </strong>
+
+                    </a>
+
+
+                    <a
+                        href="mailto:alvaromartinezfisioterapia@gmail.com"
+                        class="contact-item"
+                    >
+
+                        <small>
+                            Email
+                        </small>
+
+                        <strong>
+                            alvaromartinezfisioterapia@gmail.com
+                        </strong>
+
+                    </a>
+
+                </div>
+
+
+                <div class="contact-box">
+
+                    <h3>
+                        Solicita tu cita
+                    </h3>
+
+                    <p>
+                        Escríbeme por WhatsApp y hablamos sobre tu caso
+                        y disponibilidad.
+                    </p>
+
+                    <a
+                        href="https://wa.me/34691180034"
+                        class="button"
+                        target="_blank"
+                        rel="noopener"
+                    >
+                        Contactar por WhatsApp
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+</main>
+
+
+<footer>
+
+    <div class="container">
+
+        <div class="footer-content">
+
+            <div class="footer-brand">
+                Álvaro Martínez Fisioterapia
+            </div>
+
+            <div class="footer-links">
+
+                <a href="../legal/aviso-legal.html">
+                    Aviso legal
+                </a>
+
+                <a href="../legal/politica-privacidad.html">
+                    Privacidad
+                </a>
+
+            </div>
+
+        </div>
+
+        <div class="copyright">
+            © 2026 Álvaro Martínez Fisioterapia. Todos los derechos reservados.
+        </div>
+
+    </div>
+
+</footer>
+
+</body>
+</html>
