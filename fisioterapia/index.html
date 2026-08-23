@@ -1,1 +1,183 @@
 
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chivitalcon</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #f7f7f7;
+            color: #222;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 24px 6%;
+            background: #ffffff;
+            border-bottom: 1px solid #e5e5e5;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
+
+        nav {
+            display: flex;
+            gap: 24px;
+        }
+
+        nav a {
+            color: #222;
+            text-decoration: none;
+            font-size: 15px;
+        }
+
+        nav a:hover {
+            opacity: 0.6;
+        }
+
+        main {
+            min-height: 80vh;
+            padding: 70px 20px;
+        }
+
+        .hero {
+            max-width: 850px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .hero h2 {
+            font-size: clamp(42px, 7vw, 72px);
+            line-height: 1.05;
+            margin-bottom: 24px;
+        }
+
+        .hero p {
+            max-width: 650px;
+            margin: 0 auto 32px;
+            font-size: 19px;
+            line-height: 1.6;
+            color: #666;
+        }
+            line-height: 1.5;
+            font-size: 15px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 30px 20px;
+            color: #888;
+            font-size: 14px;
+            border-top: 1px solid #e5e5e5;
+            background: #fff;
+        }
+
+        @media (max-width: 700px) {
+            header {
+                padding: 20px;
+            }
+
+            nav {
+                gap: 14px;
+            }
+
+            nav a {
+                font-size: 14px;
+            }
+
+            main {
+                padding: 55px 20px;
+            }
+
+            .features {
+                grid-template-columns: 1fr;
+                margin-top: 60px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <div class="logo">CHIVITALCON</div>
+
+        <nav>
+            <a href="#">Inicio</a>
+            <a href="#">Entrar</a>
+        </nav>
+    </header>
+
+    <main>
+
+        <section class="hero">
+
+            <h2>Herramientas útiles.
+Sin registros. Sin complicaciones.</h2>
+
+            <p>
+                Utilidades sencillas para resolver cosas del día a día..
+            </p>
+
+          <a href="herramientas/index.html" class="button">Ver herramientas</a>
+
+            <div class="tagline">
+                Sencillo · Claro · Para todos
+            </div>
+
+        </section>
+
+        <section class="features">
+
+            <div class="card">
+                <h3>Descubre</h3>
+                <p>
+                    Encuentra nuevas posibilidades
+                    de una forma sencilla.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>Conecta</h3>
+                <p>
+                    Crea conexiones y descubre
+                    nuevas oportunidades.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>Crea</h3>
+                <p>
+                    Da forma a tus ideas y
+                    conviértelas en algo real.
+                </p>
+            </div>
+
+        </section>
+
+    </main>
+
+    <footer>
+    © 2026 Chivitalcon ·
+    <a href="legal/aviso-legal.html">Aviso legal</a> ·
+    <a href="legal/privacidad.html">Política de privacidad</a>
+</footer>
+
+</body>
+</html>
+</body>
+</html>
