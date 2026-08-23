@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Herramientas | CHIVITALCON</title>
+    <meta name="description" content="Herramientas sencillas y útiles de CHIVITALCON.">
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #ffffff;
+            color: #222222;
+            min-height: 100vh;
+        }
+
+        header {
+            padding: 24px;
+            border-bottom: 1px solid #eeeeee;
+        }
+
+        .header-inner {
+            max-width: 1000px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 22px;
+            font-weight: 700;
+            text-decoration: none;
+            color: #222222;
+        }
+
+        nav a {
+            margin-left: 20px;
+            text-decoration: none;
+            color: #555555;
+        }
+
+        main {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 70px 24px;
+        }
+
+        .hero {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .hero h1 {
+            font-size: 42px;
+            margin-bottom: 16px;
+        }
+
+        .hero p {
+            color: #666666;
+            font-size: 18px;
+        }
+
+        .tools {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 20px;
+        }
+
+        .tool-card {
+            border: 1px solid #eeeeee;
+            border-radius: 16px;
+            padding: 28px;
+            background: #ffffff;
+        }
+
+        .tool-card h2 {
+            font-size: 21px;
+            margin-bottom: 10px;
+        }
+
+        .tool-card p {
+            color: #666666;
+            line-height: 1.5;
+        }
+
+        footer {
+            text-align: center;
+            padding: 30px 24px;
+            color: #888888;
+            font-size: 14px;
+        }
+
+        @media (max-width: 600px) {
+            .header-inner {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            nav a {
+                margin: 0 8px;
+            }
+
+            .hero h1 {
+                font-size: 32px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <div class="header-inner">
+        <a href="../index.html" class="logo">CHIVITALCON</a>
+
+        <nav>
+            <a href="../index.html">Inicio</a>
+            <a href="index.html">Herramientas</a>
+        </nav>
+    </div>
+</header>
+
+<main>
+
+    <section class="hero">
+        <h1>Herramientas</h1>
+        <p>Herramientas útiles. Sin registros. Sin complicaciones.</p>
+    </section>
+
+    <section class="tools">
+
+        <article class="tool-card">
+            <h2>Próximamente</h2>
+            <p>
+                Estamos preparando herramientas sencillas
+                para ayudarte a resolver tareas del día a día.
+            </p>
+        </article>
+
+    </section>
+
+</main>
+
+<footer>
+    © 2026 Chivitalcon
+</footer>
+
+</body>
+</html>
